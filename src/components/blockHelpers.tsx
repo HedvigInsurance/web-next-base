@@ -187,7 +187,10 @@ const sectionSizeStyles = {
     },
   },
   xl: {
-    padding: '10rem 0',
+    padding: '10rem 0 3rem',
+    display: 'flex',
+    alignItems: 'flex-end',
+
     [TABLET_BP_DOWN]: {
       padding: '6rem 0',
     },
