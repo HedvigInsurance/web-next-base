@@ -83,6 +83,7 @@ export const ButtonBrandPivot = styled('button')<
       cursor: 'pointer',
       lineHeight: '1rem',
       transition: 'background 150ms, color 150ms',
+      whiteSpace: 'nowrap',
       ...getMinimalButtonTypeStyle(styleType, color),
 
       '&:hover': {

@@ -21,7 +21,7 @@ import {
 } from '../BaseBlockProps'
 import { LanguagePicker } from './LanguagePicker'
 import { MenuItem } from './MenuItem'
-import { Burger, TABLET_BP_DOWN, TABLET_BP_UP } from './mobile'
+import { Burger, TABLET_BP_DOWN, TABLET_BP_UP, DESKTOP_BP_UP } from './mobile'
 
 export const WRAPPER_HEIGHT = '5rem'
 export const MOBILE_WRAPPER_HEIGHT = '4.5rem'
@@ -166,7 +166,11 @@ const LogoLink = styled('a')({
 })
 
 const ButtonWrapper = styled('div')({
-  paddingLeft: '3rem',
+  paddingLeft: '2rem',
+
+  [DESKTOP_BP_UP]: {
+    paddingLeft: '3rem',
+  },
 
   [TABLET_BP_DOWN]: {
     paddingTop: '1.5rem',

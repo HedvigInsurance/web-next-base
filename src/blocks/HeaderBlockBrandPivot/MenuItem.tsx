@@ -7,7 +7,7 @@ import { Chevron } from 'components/icons/Chevron'
 import { MOBILE_BP_DOWN } from 'components/blockHelpers'
 import { MenuItem as MenuItemType } from '../../storyblok/StoryContainer'
 import { getStoryblokLinkUrl } from '../../utils/storyblok'
-import { TABLET_BP_DOWN, TABLET_BP_UP } from './mobile'
+import { TABLET_BP_DOWN, TABLET_BP_UP, DESKTOP_BP_UP } from './mobile'
 
 const MenuListItem = styled('li')({
   position: 'relative',
@@ -16,6 +16,11 @@ const MenuListItem = styled('li')({
 
   [TABLET_BP_UP]: {
     display: 'flex',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+  },
+
+  [DESKTOP_BP_UP]: {
     paddingLeft: '1.5rem',
     paddingRight: '1.5rem',
   },

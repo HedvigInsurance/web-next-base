@@ -4,8 +4,9 @@ import React from 'react'
 import { TogglableState } from '../../components/containers/Togglable'
 import { HEADER_VERTICAL_PADDING, TOGGLE_TRANSITION_TIME } from './index'
 
-export const TABLET_BP_DOWN = '@media (max-width: 1000px)'
-export const TABLET_BP_UP = '@media (min-width: 1001px)'
+export const TABLET_BP_DOWN = '@media (max-width: 1023px)'
+export const TABLET_BP_UP = '@media (min-width: 1024px)'
+export const DESKTOP_BP_UP = '@media (min-width: 1280px)'
 
 const BURGER_LINE_WIDTH = '1.5rem'
 
