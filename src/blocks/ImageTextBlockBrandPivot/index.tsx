@@ -39,8 +39,9 @@ interface Animateable {
 
 const AlignableContentWrapper = styled(ContentWrapper)<{
   textPosition: TextPosition
-}>(({ textPosition }) => ({
-  padding: '0 2rem',
+  padding?: 'minimal' | 'relaxed'
+}>(({ textPosition, padding }) => ({
+  padding: padding === 'relaxed' ? '0 2rem' : '0 1rem',
   display: 'flex',
   position: 'relative',
   flexDirection:
@@ -317,6 +318,7 @@ export const ImageTextBlockBrandPivot: React.FunctionComponent<ImageTextBlockPro
         index={index}
         brandPivot
         fullWidth={full_width}
+        padding={background_type === 'video' ? 'relaxed' : 'minimal'}
       >
         <TextWrapper
           textPosition={text_position}
