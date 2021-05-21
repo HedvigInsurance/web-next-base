@@ -27,16 +27,13 @@ export const TrustpilotBlock: React.FC = () => {
           <div
             ref={trustpilotRef}
             className="trustpilot-widget"
-            data-locale={currentLocale.label === 'se' ? 'sv-SE' : 'en-US'}
+            data-locale={currentLocale.trustpilotLocale}
             data-template-id="54ad5defc6454f065c28af8b"
             data-businessunit-id="5b62ebf41788620001d3c4ae"
             data-style-height="240px"
             data-style-width="100%"
             data-theme="light"
-            data-tags="SelectedReview"
-            data-review-languages={
-              currentLocale.htmlLang === 'sv' ? currentLocale.htmlLang : 'en'
-            }
+            data-tags={currentLocale.htmlLang}
             data-text-color={colorsV3.gray900}
           >
             <a

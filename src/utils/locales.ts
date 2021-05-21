@@ -15,6 +15,7 @@ export type LocaleData = {
   htmlLang: HtmlLang
   hrefLang: HrefLang
   adtractionSrc?: string
+  trustpilotLocale?: string
 }
 
 export type Locales = Record<Label, LocaleData>
@@ -29,6 +30,7 @@ export const locales: Locales = {
     htmlLang: 'sv',
     hrefLang: 'sv-se',
     adtractionSrc: 'https://cdn.adt387.com/jsTag?ap=1412531808',
+    trustpilotLocale: 'sv-SE',
   },
   'se-en': {
     label: 'se-en',
@@ -39,6 +41,7 @@ export const locales: Locales = {
     htmlLang: 'en',
     hrefLang: 'en-se',
     adtractionSrc: 'https://cdn.adt387.com/jsTag?ap=1412531808',
+    trustpilotLocale: 'en-US',
   },
   no: {
     label: 'no',
@@ -49,6 +52,7 @@ export const locales: Locales = {
     htmlLang: 'no',
     hrefLang: 'no-no',
     adtractionSrc: 'https://cdn.adt387.com/jsTag?ap=1492109567',
+    trustpilotLocale: 'nb-NO',
   },
   'no-en': {
     label: 'no-en',
@@ -59,6 +63,7 @@ export const locales: Locales = {
     htmlLang: 'en',
     hrefLang: 'en-no',
     adtractionSrc: 'https://cdn.adt387.com/jsTag?ap=1492109567',
+    trustpilotLocale: 'en-US',
   },
   dk: {
     label: 'dk',
@@ -68,6 +73,7 @@ export const locales: Locales = {
     langLabel: 'Da',
     htmlLang: 'da',
     hrefLang: 'da-dk',
+    trustpilotLocale: 'da-DK',
   },
   'dk-en': {
     label: 'dk-en',
@@ -77,6 +83,7 @@ export const locales: Locales = {
     langLabel: 'En',
     htmlLang: 'en',
     hrefLang: 'en-dk',
+    trustpilotLocale: 'en-US',
   },
 }
 
