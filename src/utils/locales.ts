@@ -73,6 +73,7 @@ export const locales: Locales = {
     langLabel: 'Da',
     htmlLang: 'da',
     hrefLang: 'da-dk',
+    adtractionSrc: 'https://cdn.adt387.com/jsTag?ap=1589794294',
     trustpilotLocale: 'da-DK',
   },
   'dk-en': {
@@ -83,6 +84,7 @@ export const locales: Locales = {
     langLabel: 'En',
     htmlLang: 'en',
     hrefLang: 'en-dk',
+    adtractionSrc: 'https://cdn.adt387.com/jsTag?ap=1589794294',
     trustpilotLocale: 'en-US',
   },
 }

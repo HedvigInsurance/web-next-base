@@ -14,7 +14,7 @@
     "@babel/node": "^7.10.4",
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
-    "@hedviginsurance/brand": "^4.0.3",
+    "@hedviginsurance/brand": "^4.0.4",
     "@segment/utm-params": "^2.0.0",
     "@sentry/node": "^5.27.6",
     "@types/koa-basic-auth": "^2.0.3",

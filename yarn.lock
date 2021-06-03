@@ -1101,10 +1101,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@hedviginsurance/brand@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-4.0.3.tgz#60d222f6e08db65a5403e832d525147ab3cde956"
-  integrity sha512-G6NjFFTg7rj4eVNj/QZc7xrupyJ41CTYUPVTzjkt0R7QWD3CqXStWkVKwgR8rRli51swpVY7xhlk7HX1mlJ8WQ==
+"@hedviginsurance/brand@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-4.0.4.tgz#4147928d89d4a23e2d8b4443465624fa1cdbd115"
+  integrity sha512-jvvS6lJAdIjjZj27lAPLMFnW0nuOAJzgra6yZFnHaF0L8u35WSmHCZUMZTmWMsTOJ69KNbVdpccb0yMEPIc6ww==
 
 "@hypnosphi/create-react-context@^0.3.1":
   version "0.3.1"
