@@ -86,6 +86,16 @@ const Link = styled.a`
   }
 `
 
+type Links = {
+  link: string
+  text: string
+}[]
+
+type Values = {
+  description: string
+  value: string
+}[]
+
 interface InsuranceInfoBlockProps extends BrandPivotBaseBlockProps {
   value_1_description: string
   value_1_value: string
@@ -103,6 +113,10 @@ interface InsuranceInfoBlockProps extends BrandPivotBaseBlockProps {
   value_7_value: string
   terms_link: string
   terms_link_text: string
+  terms_link_2: string
+  terms_link_text_2: string
+  terms_link_3: string
+  terms_link_text_3: string
   presale_info_link: string
   presale_info_link_text: string
   cta_text: string
@@ -113,8 +127,25 @@ export const InsuranceInfoBlock: React.FC<InsuranceInfoBlockProps> = ({
   color,
   index,
   extra_styling,
-  ...values
+  ...data
 }) => {
+  const values: Values = [
+    { description: data.value_1_description, value: data.value_1_value },
+    { description: data.value_2_description, value: data.value_2_value },
+    { description: data.value_3_description, value: data.value_3_value },
+    { description: data.value_4_description, value: data.value_4_value },
+    { description: data.value_5_description, value: data.value_5_value },
+    { description: data.value_6_description, value: data.value_6_value },
+    { description: data.value_7_description, value: data.value_7_value },
+  ].filter((item) => item.value)
+
+  const links: Links = [
+    { link: data.terms_link, text: data.terms_link_text },
+    { link: data.terms_link_2, text: data.terms_link_text_2 },
+    { link: data.terms_link_3, text: data.terms_link_text_3 },
+    { link: data.presale_info_link, text: data.presale_info_link_text },
+  ].filter((item) => item.text)
+
   return (
     <StyledSectionWrapper
       extraStyling={extra_styling}
@@ -122,92 +153,34 @@ export const InsuranceInfoBlock: React.FC<InsuranceInfoBlockProps> = ({
       brandPivot
     >
       <StyledContentWrapper index={index}>
-        {values.value_1_value && (
-          <Column>
-            <InsuranceValueDescription>
-              {values.value_1_description}
-            </InsuranceValueDescription>
-            <InsuranceValue>{values.value_1_value}</InsuranceValue>
+        {values.map(({ description, value }) => (
+          <Column key={description + value}>
+            <InsuranceValueDescription>{description}</InsuranceValueDescription>
+            <InsuranceValue>{value}</InsuranceValue>
           </Column>
-        )}
-        {values.value_2_value && (
-          <Column>
-            <InsuranceValueDescription>
-              {values.value_2_description}
-            </InsuranceValueDescription>
-            <InsuranceValue>{values.value_2_value}</InsuranceValue>
-          </Column>
-        )}
-        {values.value_3_value && (
-          <Column>
-            <InsuranceValueDescription>
-              {values.value_3_description}
-            </InsuranceValueDescription>
-            <InsuranceValue>{values.value_3_value}</InsuranceValue>
-          </Column>
-        )}
-        {values.value_4_value && (
-          <Column>
-            <InsuranceValueDescription>
-              {values.value_4_description}
-            </InsuranceValueDescription>
-            <InsuranceValue>{values.value_4_value}</InsuranceValue>
-          </Column>
-        )}
-        {values.value_5_value && (
-          <Column>
-            <InsuranceValueDescription>
-              {values.value_5_description}
-            </InsuranceValueDescription>
-            <InsuranceValue>{values.value_5_value}</InsuranceValue>
-          </Column>
-        )}
-        {values.value_6_value && (
-          <Column>
-            <InsuranceValueDescription>
-              {values.value_6_description}
-            </InsuranceValueDescription>
-            <InsuranceValue>{values.value_6_value}</InsuranceValue>
-          </Column>
-        )}
-        {values.value_7_value && (
-          <Column>
-            <InsuranceValueDescription>
-              {values.value_7_description}
-            </InsuranceValueDescription>
-            <InsuranceValue>{values.value_7_value}</InsuranceValue>
-          </Column>
-        )}
+        ))}
 
         <Column lastOnMobile hardBottom>
-          {values.terms_link_text && (
+          {links.map(({ link, text }) => (
             <Link
-              href={values.terms_link}
+              href={link}
               target="_blank"
               rel="noopener nofollow"
+              key={link}
             >
-              {values.terms_link_text}↗
+              {text}↗
             </Link>
-          )}
-          {values.presale_info_link_text && (
-            <Link
-              href={values.presale_info_link}
-              target="_blank"
-              rel="noopener nofollow"
-            >
-              {values.presale_info_link_text}↗
-            </Link>
-          )}
+          ))}
         </Column>
 
-        {values.cta_link && (
+        {data.cta_link && (
           <Column halfHardBottom>
             <ButtonLinkBrandPivot
-              href={values.cta_link}
+              href={data.cta_link}
               fullWidth
               styleType="outlined"
             >
-              {values.cta_text}
+              {data.cta_text}
             </ButtonLinkBrandPivot>
           </Column>
         )}

@@ -1993,45 +1993,86 @@
           "type": "text",
           "pos": 20
         },
-        "terms_link": {
-          "type": "text",
-          "pos": 21
+        "terms_link_section_1": {
+          "type": "section",
+          "pos": 21,
+          "keys": ["terms_link", "terms_link_text"]
         },
-        "terms_link_text": {
+        "terms_link": {
           "type": "text",
           "pos": 22
         },
-        "presale_info_link": {
+        "terms_link_text": {
           "type": "text",
           "pos": 23
         },
-        "presale_info_link_text": {
-          "type": "text",
+        "terms_link_section_2": {
+          "type": "section",
+          "keys": ["terms_link_2", "terms_link_text_2"],
           "pos": 24
         },
-        "cta_link": {
+        "terms_link_2": {
           "type": "text",
           "pos": 25
         },
-        "cta_text": {
+        "terms_link_text_2": {
           "type": "text",
           "pos": 26
         },
+        "terms_link_section_3": {
+          "type": "section",
+          "pos": 27,
+          "keys": ["terms_link_3", "terms_link_text_3"]
+        },
+        "terms_link_3": {
+          "type": "text",
+          "pos": 28
+        },
+        "terms_link_text_3": {
+          "type": "text",
+          "pos": 29
+        },
+        "presale_info_section": {
+          "type": "section",
+          "keys": ["presale_info_link", "presale_info_link_text"],
+          "pos": 30
+        },
+        "presale_info_link": {
+          "type": "text",
+          "pos": 31
+        },
+        "presale_info_link_text": {
+          "type": "text",
+          "pos": 32
+        },
+        "cta_link_section": {
+          "type": "section",
+          "keys": ["cta_link", "cta_text"],
+          "pos": 33
+        },
+        "cta_link": {
+          "type": "text",
+          "pos": 34
+        },
+        "cta_text": {
+          "type": "text",
+          "pos": 35
+        },
         "color": {
           "type": "custom",
-          "pos": 27,
+          "pos": 36,
           "field_type": "hedvig-minimal-color-picker",
           "options": []
         },
         "extra_styling": {
           "type": "textarea",
-          "pos": 28
+          "pos": 37
         },
         "tab-3af4122d-35df-4012-a15e-7b0a7e687292": {
           "type": "tab",
           "display_name": "Styling",
           "keys": ["extra_styling", "color"],
-          "pos": 29
+          "pos": 38
         }
       },
       "image": null,
