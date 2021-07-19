@@ -1,0 +1,16 @@
+# robots.txt for https://www.hedvig.com/
+
+User-agent: *
+Disallow: */old-*
+Disallow: */referrals*
+Disallow: */forever*
+Disallow: */new-member/*
+Disallow: */welcome?code=
+# Block access to discount code pages
+Disallow: */partner*
+Allow: */partner/partner-program
+Disallow: */a-b-test*
+Disallow: */invite*
+Disallow: */lp/*
+
+Sitemap: https://www.hedvig.com/sitemap.xml

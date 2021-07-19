@@ -6,6 +6,18 @@ import koaStatic from 'koa-static'
 
 export const configureAssets = (app: Koa) => {
   const rootDir = path.resolve(__dirname, '../../..')
+
+  app.use(
+    mount(
+      '/',
+      koaStatic(path.resolve(rootDir, 'assets/public'), {
+        maxage: 1000 * 86400 * 365,
+        brotli: true,
+        gzip: true,
+      }),
+    ),
+  )
+
   app.use(
     mount(
       '/assets-next',
