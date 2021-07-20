@@ -100,15 +100,25 @@ export const MarketPicker: React.FC<MarketPickerProps> = ({
         styleType="outlined"
         color="standard-inverse"
         onClick={() => setIsOpen((prev) => !prev)}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
       >
         <GlobeIcon />
         <ButtonLabel>{currentMarketName}</ButtonLabel>
         <Chevron />
       </Button>
 
-      <Menu style={{ display: isOpen ? 'block' : 'none' }}>
+      <Menu
+        style={{ display: isOpen ? 'block' : 'none' }}
+        role="listbox"
+        tabIndex={-1}
+      >
         {markets.map((market) => (
-          <MenuItem key={market.label}>
+          <MenuItem
+            key={market.label}
+            role="option"
+            aria-selected={market.marketName === currentMarketName}
+          >
             <MenuItemLink
               href={`/${market.marketLabel}`}
               hrefLang={market.hrefLang}
