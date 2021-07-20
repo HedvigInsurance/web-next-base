@@ -187,7 +187,6 @@ const FooterFooter = styled(DoubleColumn)`
 type FooterBlockProps = BrandPivotBaseBlockProps
 
 export const Footer: React.FC<{ story: GlobalStory } & FooterBlockProps> = ({
-  _uid,
   color,
   extra_styling = '',
   story,
@@ -261,7 +260,7 @@ export const Footer: React.FC<{ story: GlobalStory } & FooterBlockProps> = ({
             <ColumnHeader>{story.content.footer_market_title}</ColumnHeader>
             <ContextContainer>
               {({ currentLocale }) => (
-                <MarketPicker blokId={_uid} currentLocale={currentLocale} />
+                <MarketPicker currentLocale={currentLocale} />
               )}
             </ContextContainer>
           </div>
